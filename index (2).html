@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            color: white;
+            background-color: black;
+        }
+        h1{
+            text-align: center;
+            color:rgb(255, 250, 93);
+            font-size: 40px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            animation-name: initia;
+        
+            
+        }
+        input{
+            text-align: center;
+            margin-left: 37%;
+            border: 1px solid white;
+            border-radius: 5px;
+            width: 26%;
+            height: 35px;
+            color: white;
+            background-color: black;
+        }
+        img{
+            border-radius: 50%;
+            /* align-items: center; */
+            margin: 2% 2% -2% 4%;
+            cursor: pointer;
+        }
+        #saturn{
+            border-radius: 50%;
+            /* width: 230px; */
+            height: 160px;
+            margin-left: 5%;
+            margin-right: -32px;
+        }
+        #sun{
+            margin-left: 12%;
+            margin-right: 10%;
+        }
+        #mercury{
+            margin-left: 10%;
+        }
+        #p{
+            margin-top: 1%;
+            text-align: center;
+            color: red;
+        }
+        span{
+            margin: 2.5% 5% 0% 9.8%;
+            display: inline-flex;
+            font-weight:bold;
+        }
+        #jup{
+            margin-left: 10%;
+        }
+        #ven{
+            margin-left: 10.6%;
+        }
+        #mar{
+            margin-left: 10.5%;
+        }
+        #nep{
+            margin-left: 10%;
+        }
+        #uranus{
+            margin-left: 10%;
+        }
+        #sun{
+            margin-left: 10%;
+            margin-right: 10%;
+            padding-right: 105%;
+        }
+        #plu{
+            margin-left: 5%;
+            margin-right: 10%;
+        }
+        #parent{
+            display: inline-flex;
+        }
+        #parent2{
+            display: inline-flex;
+            padding-top: 50px;
+            padding-left: 5%;
+        }   
+        h3{
+            display: inline-flex;
+            padding:0px 0% 0% 33%;
+        }
+        .im{
+            padding-left:20px ;
+        }
+        #hell{
+            margin-left: 55px;
+        }
+        #helli{
+            margin-right: 20px;
+        }
+        #hello{
+            padding-right: 150px;
+        }
+        /* #myVideo{
+            margin: -1% -3% 0% -3%;
+        } */
+    </style>
+</head>
+<body>
+    <!-- <video height="100%" width="100%" autoplay muted loop id="myVideo">
+        <source src="sspace.mp4" type="video/mp4">
+    </video> -->
+    <h1>weight of the object should be added here </h1>
+    <input placeholder="Enter the weight" type="text" id="inp"><br>
+    <p id="p"></p>
+    <div id="parent">
+        <div class="im"><img src="C:\Users\Dell\Downloads\earth.jpg" width="75%" height="150px" id="ear" onclick="earth()">
+          <h3>Earth</h3>
+        </div>
+        <div class="im"><img src="C:\Users\Dell\Downloads\ju.jpg" width="76%" height="150px" onclick="jupiter()">
+            <h3>Jupiter</h3>
+        </div>
+        <div class="im"><img src="C:\Users\Dell\Downloads\ven.jpg" width="76%" height="155px" onclick="venus()">
+            <h3>Venus</h3>
+        </div>
+        <div class="im"><img src="C:\Users\Dell\Downloads\mars.jpg" width="76%" height="160px" onclick="mars()">
+            <h3>Mars</h3>
+        </div>
+        <div class="im"><img src="C:\Users\Dell\Downloads\nep4.jpg" width="74%" height="160px" onclick="neptune()">
+            <h3>Neptune</h3>
+        </div>
+    </div>
+    <div id="parent2">
+        <div class="im">
+            <img src="C:\Users\Dell\Downloads\sat.jpg" width="80%" height="150px" id="satrun" onclick="saturn()">
+            <h3>Saturn</h3>
+        </div>
+        <div class="im">
+            <img src="C:\Users\Dell\Downloads\uran.jpg" width="85%" height="150px" id="uranus" onclick="uranus()">
+            <h3>Uranus</h3>
+        </div>
+        <div class="im">
+            <img src="C:\Users\Dell\Downloads\sun.jpg" width="90%" height="150px" id="sun" onclick="sun()">
+            <h3 id="hell">Sun</h3>
+        </div>
+        <div class="im">
+            <img src="C:\Users\Dell\Downloads\plu.jpg" width="90%" height="150px" id="plu" onclick="pluto()">
+            <h3 id="hello">Pluto</h3>
+        </div>
+        <div class="im">
+            <img src="C:\Users\Dell\Downloads\mer.jpg" width="80%" height="150px" id="mercury" onclick="mercury()">
+            <h3 id="helli">Mercury</h3>
+        </div>
+    </div>
+    <script>
+        function earth(){
+            var a=document.getElementById("inp").value;
+            a=parseInt(a);
+            if(!isNaN(a)) document.getElementById("p").innerHTML="The Weight of Object on Earth is : "+a;
+            else alert("Please Enter a Valid Weight");
+        }
+        function jupiter(){
+            var a=document.getElementById("inp").value;
+            a=parseInt(a);
+            if(!isNaN(a)) document.getElementById("p").innerHTML="The Weight of Object on Jupiter is : "+Math.round(a*2.34);
+            else alert("Please Enter a Valid Weight");
+        }
+        function venus(){
+            var a=document.getElementById("inp").value;
+            a=parseInt(a);
+            if(!isNaN(a)) document.getElementById("p").innerHTML="The Weight of Object on Venus is : "+Math.round(a*0.91);
+            else alert("Please Enter a Valid Weight");
+        }
+        function mars(){
+            var a=document.getElementById("inp").value;
+            a=parseInt(a);
+            if(!isNaN(a)) document.getElementById("p").innerHTML="The Weight of Object on Mars is : "+Math.round(a*0.38);
+            else alert("Please Enter a Valid Weight");
+        }
+        function neptune(){
+            var a=document.getElementById("inp").value;
+            a=parseInt(a);
+            if(!isNaN(a)) document.getElementById("p").innerHTML="The Weight of Object on Neptune is : "+Math.round(a*1.19);
+            else alert("Please Enter a Valid Weight");
+        }
+        function satrun(){
+            var a=document.getElementById("inp").value;
+            a=parseInt(a);
+            if(!isNaN(a)) document.getElementById("p").innerHTML="The Weight of Object on Satrun is : "+Math.round(a*1.06);
+            else alert("Please Enter a Valid Weight");
+        }
+        function uranus(){
+            var a=document.getElementById("inp").value;
+            a=parseInt(a);
+            if(!isNaN(a)) document.getElementById("p").innerHTML="The Weight of Object on Uranus is : "+Math.round(a*0.92);
+            else alert("Please Enter a Valid Weight");
+        }
+        function sun(){
+            var a=document.getElementById("inp").value;
+            a=parseInt(a);
+            if(!isNaN(a)) document.getElementById("p").innerHTML="The Weight of Object on Sun is : "+Math.round(a*27.01);
+            else alert("Please Enter a Valid Weight");
+        }
+        function pluto(){
+            var a=document.getElementById("inp").value;
+            a=parseInt(a);
+            if(!isNaN(a)) document.getElementById("p").innerHTML="The Weight of Object on Pluto is : "+Math.round(a*0.06);
+            else alert("Please Enter a Valid Weight");
+        }
+        function mercury(){
+            var a=document.getElementById("inp").value;
+            a=parseInt(a);
+            if(!isNaN(a)) document.getElementById("p").innerHTML="The Weight of Object on Mercury is : "+Math.round(a*0.38);
+            else alert("Please Enter a Valid Weight");
+        }
+    </script>
+</body>
+</html>
